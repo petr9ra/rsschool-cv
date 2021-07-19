@@ -10,8 +10,26 @@ I like to study and learn something new. I like to read books, do physical educa
 Since childhood, I have a predisposition to work with electronics and computers. I like to disassemble, assemble and configure something. I can build, configure, solve problems with computers.
 I live in Minsk.
 
+## Skills
+* Engineering
+* HTML/CSS
+* Knowledge about ServiceNow administration
+* Initial knowledge of JS. I have been studying.
+
 ## Key strengths
-Hardworking, responsible, sociable, quick learner, goal-oriented, conscientious
+* Hardworking
+* Responsible
+* Sociable
+* Quick learner 
+* Goal-oriented 
+* Conscientious
+
+## Education
+* Belorusian State University of Informatics and Radioelecnronics, Information Technology and Technical System Management Engineer. (2012-2018)
+* Completed a course in ServiceNow platform in EPAM. (2021)
+
+## English
+* Pre-Intermediate (A2)
 
 ## Code example
 ```
@@ -90,10 +108,3 @@ PetrGrachevHWPractice04.prototype = Object.extendsObject(AbstractAjaxProcessor, 
     type: 'PetrGrachevHWPractice04'
 });
 ```
-
-## Education
-* Belorusian State University of Informatics and Radioelecnronics, Information Technology and Technical System Management Engineer. (2012-2018)
-* Completed a course in ServiceNow platform in EPAM. (2021)
-
-## English
-* Pre-Intermediate (A2)
