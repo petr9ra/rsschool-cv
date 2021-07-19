@@ -14,7 +14,8 @@ I live in Minsk.
 Hardworking, responsible, sociable, quick learner, goal-oriented, conscientious
 
 ## Code example
-```// Client Script (client side)
+```
+// Client Script (client side)
 function onChange(control, oldValue, newValue, isLoading, isTemplate) {
     if (isLoading || newValue === '') {
         return;
@@ -33,7 +34,7 @@ function onChange(control, oldValue, newValue, isLoading, isTemplate) {
     var result = marks.getAnswer();
     g_form.addInfoMessage(result);
 
-    // get response from server side script by Async Ajax
+    // get response from server side script by Async Ajax (the second possibility)
       // marks.getXML(callback);
 	    // function callback(response) {
 	        // 	var answer = response.responseXML.documentElement.getAttribute("answer");
