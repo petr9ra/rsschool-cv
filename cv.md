@@ -18,7 +18,7 @@ Hardworking, responsible, sociable, quick learner, goal-oriented, conscientious
 
 ## Education
 * Belorusian State University of Informatics and Radioelecnronics, Information Technology and Technical System Management Engineer. (2012-2018)
-* Completed a course in ServiceNow platform in EPAM.
+* Completed a course in ServiceNow platform in EPAM. (2021)
 
 ## English
 * Pre-Intermediate (A2)
