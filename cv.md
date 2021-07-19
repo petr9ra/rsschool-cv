@@ -1,9 +1,9 @@
 #Peter Grachev
 
-##Contacts:
+##Contacts
 *email: petr9ra@yandex.ru
 *phone number: +375 33 318 33 87 (Viber/Telegram)
-*discord: Petr Grachev#1240
+\*discord: Petr Grachev#1240
 
 ##About me
 I like to study and learn something new. I like to read books, do physical education, listen to music form various genres, good cars and bikes. I have active and healhy lifestyle. I like to work and see the results of my work.
@@ -13,4 +13,12 @@ I live in Minsk.
 ##Key strengths
 Hardworking, responsible, sociable, quick learner, goal-oriented, conscientious
 
+##Code example
+`var answer = parseInt(Math.random() *100);`
 
+##Education
+*Belorusian State University of Informatics and Radioelecnronics, Information Technology and Technical System Management Engineer. (2012-2018)
+*Completed a course in ServiceNow platform in EPAM.
+
+##English
+*Pre-Intermediate (A2)
