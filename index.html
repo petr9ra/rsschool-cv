@@ -15,11 +15,10 @@
   <body class="page-body">
     <main class="container">
       <div class="left-side">
-        <h1 class="main-title">Peter Grachev</h1>
         <img
           src="img/Photo.jpg"
-          width="380px"
-          height="507px"
+          width="380"
+          height="507"
           alt="Photo of Peter Grachev"
         />
         <section class="contact">
@@ -32,7 +31,9 @@
               Email:<a href="mailto:petr9ra@yandex.ru">petr9ra@yandex.ru</a>
             </li>
             <li class="contact__item">
-              Address:<span>Voronyanskogo street, Minsk, Belarus, 220039</span>
+              Address:<br /><span
+                >Voronyanskogo street, Minsk, Belarus, 220039</span
+              >
             </li>
           </ul>
         </section>
@@ -41,8 +42,8 @@
           <ul class="education__list">
             <li class="education__item">
               2012-2018 <br />Belorusian State University of Informatics and
-              Radioelecnronics, Information Technology and Technical System
-              Management Engineer
+              Radioelecnronics (BSUIR),<br />
+              Information Technology and Technical System Management Engineer
             </li>
             <li class="education__item">
               2021 <br />ServiceNow Course in EPAM
@@ -51,29 +52,35 @@
         </section>
       </div>
       <div class="right-side">
+        <section class="page-title">
+          <h1 class="main-title">Peter <br />Grachev</h1>
+          <p>Front-End developer</p>
+        </section>
         <section class="about-me">
           <h2 class="section-title">About me</h2>
           <p>
             I like to study and learn something new. I like to read books, do
-            physical education, listen to music of different genres. I'm fond of good cars
-            and bikes. I lead active and healhy lifestyle. I like to work and
-            see the results of my work.<br />
-            Since childhood, I have had a predisposition to work with electronics
-            and computers. I like to disassemble, assemble and configure
-            something. I can build, configure, solve problems with computers.
+            physical education, listen to music of different genres. I'm fond of
+            good cars and bikes. I lead active and healhy lifestyle. I like to
+            work and see the results of my work.<br />
+            Since childhood, I have had a predisposition to work with
+            electronics and computers. I like to disassemble, assemble and
+            configure something. I can build, configure, solve problems with
+            computers.
           </p>
         </section>
-        <section class="skill">
-          <ul class="skill__list">
-            <li class="skill__item">Engineering</li>
-            <li class="skill__item">HTML/CSS</li>
-            <li class="skill__item">
+        <section class="skills">
+          <h2 class="section-title">Skills</h2>
+          <ul class="skills__list">
+            <li class="skills__item">Engineering</li>
+            <li class="skills__item">HTML/CSS</li>
+            <li class="skills__item">
               Knowledge about ServiceNow administration
             </li>
-            <li class="skill__item">
+            <li class="skills__item">
               Initial knowledge of JS. I have been studying JS.
             </li>
-            <li class="skill__item">
+            <li class="skills__item">
               English - A2. I have been learning English with a tutor.
             </li>
           </ul>
@@ -97,7 +104,9 @@
               if (isLoading || newValue === '') {
                 return;
               }
-              //	In the Client script call the function from Script include by Ajax. Send to the function next fields: previous Mark, new Mark, First mark, Average mark.
+              // In the Client script call the function from Script include by Ajax. 
+              Send to the function next fields: previous Mark, new Mark, First mark, 
+              Average mark.
               var marks = new GlideAjax('PetrGrachevHWPractice04');
               marks.addParam('sysparm_name', 'compareMark');
               // get values from form
@@ -132,14 +141,16 @@
                 var averageMark = this.getParameter('sysparm_averageMark');
   
                 // forming a response
-                var result = this._compareNewMarkAndMark(newMark, previousMark) + '\n' + this._compareNewMarkAndFirstMark(newMark, firstMark) + '\n' + this._compareNewMarkAndAverageMark(newMark, averageMark);
+                var result = this._compareNewMarkAndMark(newMark, previousMark) + '\n' + 
+                this._compareNewMarkAndFirstMark(newMark, firstMark) + '\n' + 
+                this._compareNewMarkAndAverageMark(newMark, averageMark);
                 return result;
               },
   
               _compareNewMarkAndMark: function(newMark, previousMark) {
                 if (+newMark > +previousMark) {
                   return 'New mark is higher than old one.';
-                } else if (+newMark < +previousMark) {
+                } else if (+newMark &lt; +previousMark) {
                   return 'New mark is lower than old one.';
                 }
               },
@@ -147,7 +158,7 @@
               _compareNewMarkAndFirstMark: function(newMark, firstMark) {
                 if (+newMark > +firstMark) {
                   return 'New mark is higher than first mark.';
-                } else if (+newMark < +firstMark) {
+                } else if (+newMark &lt; +firstMark) {
                   return 'New mark is lower than first mark.';
                 } else if (+newMark == +firstMark) {
                   return 'New mark is equal than first mark.';
@@ -157,7 +168,7 @@
               _compareNewMarkAndAverageMark: function(newMark, averageMark) {
                 if (+newMark > +averageMark) {
                   return 'New mark is higher than average one.';
-                } else if (+newMark < +averageMark) {
+                } else if (+newMark &lt; +averageMark) {
                   return 'New mark is lower than average mark.';
                 } else if (+newMark == +averageMark) {
                   return 'New mark is equal than average mark.';
@@ -167,8 +178,17 @@
               type: 'PetrGrachevHWPractice04'
             });
           </pre>
-        </section>
+        </section> 
       </div>
     </main>
+    <footer class="footer">
+      <a class="footer__item footer__github" href="https://github.com/petr9ra">
+        My GitHub
+      </a>
+      <p class="footer__item footer__year">2021</p>
+      <a class="footer__item footer__rsschool" href="https://rs.school/js/">
+        <img src="img/rs_school_js.svg" width="86" height="32" alt="RS School">
+      </a>
+    </footer>
   </body>
 </html>
