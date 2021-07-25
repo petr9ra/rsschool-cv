@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html class="page" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Peter Grachev CV</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="page-body">
+    <main class="container">
+      <div class="left-side">
+        <img
+          src="img/Photo.jpg"
+          width="380"
+          height="507"
+          alt="Photo of Peter Grachev"
+        />
+        <section class="contact">
+          <h2 class="section-title">Contact</h2>
+          <ul class="contact__list">
+            <li class="contact__item">
+              Phone:<a href="tel:+375333183387">+375 (33) 318-33-87</a>
+            </li>
+            <li class="contact__item">
+              Email:<a href="mailto:petr9ra@yandex.ru">petr9ra@yandex.ru</a>
+            </li>
+            <li class="contact__item">
+              Address:<br /><span
+                >Voronyanskogo street, Minsk, Belarus, 220039</span
+              >
+            </li>
+          </ul>
+        </section>
+        <section class="education">
+          <h2 class="section-title">Education</h2>
+          <ul class="education__list">
+            <li class="education__item">
+              2012-2018 <br />Belorusian State University of Informatics and
+              Radioelecnronics (BSUIR),<br />
+              Information Technology and Technical System Management Engineer
+            </li>
+            <li class="education__item">
+              2021 <br />ServiceNow Course in EPAM
+            </li>
+          </ul>
+        </section>
+      </div>
+      <div class="right-side">
+        <section class="page-title">
+          <h1 class="main-title">Peter <br />Grachev</h1>
+          <p>Front-End developer</p>
+        </section>
+        <section class="about-me">
+          <h2 class="section-title">About me</h2>
+          <p>
+            I like to study and learn something new. I like to read books, do
+            physical education, listen to music of different genres. I'm fond of
+            good cars and bikes. I lead active and healhy lifestyle. I like to
+            work and see the results of my work.<br />
+            Since childhood, I have had a predisposition to work with
+            electronics and computers. I like to disassemble, assemble and
+            configure something. I can build, configure, solve problems with
+            computers.
+          </p>
+        </section>
+        <section class="skills">
+          <h2 class="section-title">Skills</h2>
+          <ul class="skills__list">
+            <li>Engineering</li>
+            <li>HTML/CSS</li>
+            <li>
+              Knowledge about ServiceNow administration
+            </li>
+            <li>
+              Initial knowledge of JS. I have been studying JS.
+            </li>
+            <li>
+              English - A2. I have been learning English with a tutor.
+            </li>
+          </ul>
+        </section>
+        <section class="key-strengths">
+          <h2 class="section-title">Key strengths</h2>
+          <ul class="key-strengths__list">
+            <li>Hardworking</li>
+            <li>Responsible</li>
+            <li>Sociable</li>
+            <li>Quick learner</li>
+            <li>Goal-oriented</li>
+            <li>Conscientious</li>
+          </ul>
+        </section>
+        <section class="code-example">
+          <h2 class="section-title">Code example</h2>
+          <pre>
+            // Client Script (client side)
+            function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+              if (isLoading || newValue === '') {
+                return;
+              }
+              // In the Client script call the function from Script include by Ajax. 
+              Send to the function next fields: previous Mark, new Mark, First mark, 
+              Average mark.
+              var marks = new GlideAjax('PetrGrachevHWPractice04');
+              marks.addParam('sysparm_name', 'compareMark');
+              // get values from form
+              marks.addParam('sysparm_newMark', newValue);
+              marks.addParam('sysparm_previousMark', oldValue);
+              marks.addParam('sysparm_firstMark', g_form.getValue('u_first_mark'));
+              marks.addParam('sysparm_averageMark', g_form.getValue('u_average_mark'));
+  
+              // get response from server side script by Sync Ajax
+              marks.getXMLWait();
+              var result = marks.getAnswer();
+              g_form.addInfoMessage(result);
+  
+              // get response from server side script by Async Ajax (the second possibility)
+              // marks.getXML(callback);
+              // function callback(response) {
+                // 	var answer = response.responseXML.documentElement.getAttribute("answer");
+              // 	g_form.addInfoMessage(answer);
+              // }
+            }
+  
+            // Script Include (server side)
+            var PetrGrachevHWPractice04 = Class.create();
+            PetrGrachevHWPractice04.prototype = Object.extendsObject(AbstractAjaxProcessor, {
+  
+              // Function will compare new mark with old, first and average marks.
+              compareMark: function() {
+                // get values from Client Script
+                var newMark = this.getParameter('sysparm_newMark');
+                var previousMark = this.getParameter('sysparm_previousMark');
+                var firstMark = this.getParameter('sysparm_firstMark');
+                var averageMark = this.getParameter('sysparm_averageMark');
+  
+                // forming a response
+                var result = this._compareNewMarkAndMark(newMark, previousMark) + '\n' + 
+                this._compareNewMarkAndFirstMark(newMark, firstMark) + '\n' + 
+                this._compareNewMarkAndAverageMark(newMark, averageMark);
+                return result;
+              },
+  
+              _compareNewMarkAndMark: function(newMark, previousMark) {
+                if (+newMark > +previousMark) {
+                  return 'New mark is higher than old one.';
+                } else if (+newMark &lt; +previousMark) {
+                  return 'New mark is lower than old one.';
+                }
+              },
+  
+              _compareNewMarkAndFirstMark: function(newMark, firstMark) {
+                if (+newMark > +firstMark) {
+                  return 'New mark is higher than first mark.';
+                } else if (+newMark &lt; +firstMark) {
+                  return 'New mark is lower than first mark.';
+                } else if (+newMark == +firstMark) {
+                  return 'New mark is equal than first mark.';
+                }
+              },
+  
+              _compareNewMarkAndAverageMark: function(newMark, averageMark) {
+                if (+newMark > +averageMark) {
+                  return 'New mark is higher than average one.';
+                } else if (+newMark &lt; +averageMark) {
+                  return 'New mark is lower than average mark.';
+                } else if (+newMark == +averageMark) {
+                  return 'New mark is equal than average mark.';
+                }
+              },
+  
+              type: 'PetrGrachevHWPractice04'
+            });
+          </pre>
+        </section> 
+      </div>
+    </main>
+    <footer class="footer">
+      <a class="footer__github" href="https://github.com/petr9ra">
+        My GitHub
+      </a>
+      <p class="footer__year">2021</p>
+      <a class="footer__rsschool" href="https://rs.school/js/">
+        <img src="img/rs_school_js.svg" width="86" height="32" alt="RS School">
+      </a>
+    </footer>
+  </body>
+</html>
