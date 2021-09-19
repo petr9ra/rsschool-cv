@@ -10,16 +10,19 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;1,400&display=swap"
       rel="stylesheet"
     />
+    <link rel="icon" href="img/favicon.ico" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/theme.css">
   </head>
   <body class="page-body">
     <main class="container">
       <div class="left-side">
-        <figure>
+        <figure class="figure--left-side">
           <img
             src="img/Photo.jpg"
             width="380"
             height="507"
+            class="photo"
             alt="Photo of Peter Grachev"
           />
         </figure>
@@ -33,9 +36,8 @@
               Email:<a href="mailto:petr9ra@yandex.ru">petr9ra@yandex.ru</a>
             </li>
             <li class="contact__item">
-              Address:<br /><span
-                >Voronyanskogo street, Minsk, Belarus, 220039</span
-              >
+              Address:<br />
+              <span>Voronyanskogo street, Minsk, Belarus, 220039</span>
             </li>
           </ul>
         </section>
@@ -54,11 +56,20 @@
         </section>
       </div>
       <div class="right-side">
-        <section class="page-title">
-          <h1 class="main-title">Peter <br />Grachev</h1>
-          <p>Front-End developer</p>
-        </section>
-        <section class="about-me">
+      <section class="page-title">
+        <h1 class="main-title">Peter <br />Grachev</h1>
+        <p>Front-End developer</p>
+      </section>
+      <figure class="figure--right-side">
+        <img
+          src="img/Photo.jpg"
+          width="380"
+          height="507"
+          class="photo"
+          alt="Photo of Peter Grachev"
+        />
+      </figure>
+      <section class="about-me">
           <h2 class="section-title">About me</h2>
           <p>
             I like to study and learn something new. I like to read books, do
@@ -76,15 +87,9 @@
           <ul class="skills__list">
             <li>Engineering</li>
             <li>HTML/CSS</li>
-            <li>
-              Knowledge about ServiceNow administration
-            </li>
-            <li>
-              Initial knowledge of JS. I have been studying JS.
-            </li>
-            <li>
-              English - A2. I have been learning English with a tutor.
-            </li>
+            <li>Knowledge about ServiceNow administration.</li>
+            <li>Initial knowledge of JS. I have been studying JS.</li>
+            <li>English - A2. I have been learning English with a tutor.</li>
           </ul>
         </section>
         <section class="key-strengths">
@@ -103,6 +108,7 @@
           <details>
             <summary>From ServiceNow course</summary>
             <pre>
+              <code data-language = "javascript">
 // Client Script (client side)
 function onChange(control, oldValue, newValue, isLoading, isTemplate) {
   if (isLoading || newValue === '') {
@@ -181,9 +187,10 @@ PetrGrachevHWPractice04.prototype = Object.extendsObject(AbstractAjaxProcessor, 
     
   type: 'PetrGrachevHWPractice04'
 });
+              </code>
             </pre>
           </details>
-        </section> 
+        </section>
       </div>
     </main>
     <footer class="footer">
@@ -192,8 +199,14 @@ PetrGrachevHWPractice04.prototype = Object.extendsObject(AbstractAjaxProcessor, 
       </a>
       <p class="footer__year">2021</p>
       <a class="footer__rsschool" href="https://rs.school/js/">
-        <img src="img/rs_school_js.svg" width="86" height="32" alt="RS School">
+        <img
+          src="img/rs_school_js.svg"
+          width="86"
+          height="32"
+          alt="RS School"
+        />
       </a>
     </footer>
+    <script src="rainbow-custom.min.js"></script>
   </body>
 </html>

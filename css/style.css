@@ -1,6 +1,6 @@
 /* Global */
 .page {
-  min-width: 940px;
+  /* max-width: 940px; */
   height: 100%;
   margin: 0;
   padding: 0;
@@ -12,7 +12,6 @@
 }
 .page-body {
   min-height: 100%;
-  width: 940px;
   margin: 0 auto;
   padding: 0;
 }
@@ -52,16 +51,22 @@
 
 /* Left side */
 .left-side {
+  width: 100%;
   color: white;
   background-color: #2c323d;
 }
-.left-side figure {
-  display: block;
+.figure--left-side {
   margin: 0;
   padding: 0;
-  height: 507px;
-  background-color: lightgrey;
+  width: 100%;
+  height: min-content;
+  background-color: #343945;
 }
+.photo {
+  width: 100%;
+  object-fit: cover;
+}
+
 .left-side .section-title {
   background-color: rgba(255, 255, 255, 0.1);
 } 
@@ -110,6 +115,13 @@
 .right-side .section-title {
   background-color: rgba(0, 0, 0, 0.1)
 }
+.figure--right-side {
+  display: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: min-content;
+}
 .page-title {
   margin: 125px 80px 125px 60px;
 }
@@ -141,7 +153,7 @@
   margin-bottom: 54px;
 }
 .skills__list {
-  margin-left: 60px;
+  margin: 0px 60px;
   padding: 0;
   padding-left: 20px;
 }
@@ -151,7 +163,7 @@
   margin-bottom: 54px;
 }
 .key-strengths__list {
-  margin-left: 60px;
+  margin: 0px 60px;
   padding: 0;
   padding-left: 20px;
 }
@@ -170,6 +182,12 @@
   padding: 0;
   font-size: 10px;
   line-height: 14px;
+}
+.code-example summary {
+  text-decoration: underline;
+}
+.code-example summary:hover {
+  text-decoration: none;
 }
 
 /* Footer */
@@ -202,4 +220,103 @@
 .footer__rsschool {
   justify-self: end;
   height: 32px;
+}
+
+/* Desktop virsion */
+@media (min-width:  940px) {
+  .page-body {
+    max-width: 1280px;
+  }
+  .container {
+    grid-template-columns: 380px 1fr;
+  }
+  .figure--right-side {
+    display: none;
+  }
+}
+
+/* Tablet version */
+@media (max-width: 939px) {
+  .contact {
+    padding: 28px 0 35px;
+  }
+  .education {
+    padding: 35px 0;
+  }
+  .contact__list, 
+  .education__list {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+  .left-side figure {
+    width: 100%;
+  }
+  .photo {
+    width: 100%
+  }
+  .figure--right-side {
+    display: none;
+  }
+  .section-title {
+    margin-bottom: 26px;
+  }
+  .about-me,
+  .skills,
+  .key-strengths,
+  .code-example {
+    margin-bottom: 35px;
+  }
+  .about-me p {
+    margin: 0 30px;
+  }
+  .skills__list {
+    margin: 0px 30px;
+  }
+  .code-example details {
+    margin: 0 30px;
+  }
+  .key-strengths__list {
+    margin: 0px 30px;
+  }
+}
+
+/* Mobile version */
+@media (max-width: 639px) {
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .left-side  {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .figure--left-side {
+    display: none;
+  }
+  .contact {
+    order: 1;
+    width: 100%;
+    padding: 35px 0;
+    background-color: #2c323d;
+  }
+  .education {
+    order: 0;
+    width: 100%;
+    padding: 35px 0;
+    background-color: #343945;
+  }
+  .right-side {
+    order: -1;
+  }
+  .figure--right-side {
+    display: block;
+  }
+  .about-me {
+    margin-top: 28px;
+  }
+  .footer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
 }
