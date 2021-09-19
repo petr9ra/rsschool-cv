@@ -15,6 +15,22 @@
     <link rel="stylesheet" href="css/theme.css">
   </head>
   <body class="page-body">
+    <header>
+      <button class="burger">
+        <span class="burger__line"></span>
+        <span class="burger__name">Menu</span>
+      </button>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="#contact">Contact</a></li>
+          <li class="nav__item"><a href="#education">Education</a></li>
+          <li class="nav__item"><a href="#about-me">About me</a></li>
+          <li class="nav__item"><a href="#skills">Skills</a></li>
+          <li class="nav__item"><a href="#key-strengths">Key strengths</a></li>
+          <li class="nav__item"><a href="#code-example">Code example</a></li>
+        </ul>
+      </nav>
+    </header>
     <main class="container">
       <div class="left-side">
         <figure class="figure--left-side">
@@ -26,7 +42,7 @@
             alt="Photo of Peter Grachev"
           />
         </figure>
-        <section class="contact">
+        <section class="contact" id="contact">
           <h2 class="section-title">Contact</h2>
           <ul class="contact__list">
             <li class="contact__item">
@@ -41,7 +57,7 @@
             </li>
           </ul>
         </section>
-        <section class="education">
+        <section class="education" id="education">
           <h2 class="section-title">Education</h2>
           <ul class="education__list">
             <li class="education__item">
@@ -69,7 +85,7 @@
           alt="Photo of Peter Grachev"
         />
       </figure>
-      <section class="about-me">
+      <section class="about-me" id="about-me">
           <h2 class="section-title">About me</h2>
           <p>
             I like to study and learn something new. I like to read books, do
@@ -82,7 +98,7 @@
             computers.
           </p>
         </section>
-        <section class="skills">
+        <section class="skills" id="skills">
           <h2 class="section-title">Skills</h2>
           <ul class="skills__list">
             <li>Engineering</li>
@@ -92,7 +108,7 @@
             <li>English - A2. I have been learning English with a tutor.</li>
           </ul>
         </section>
-        <section class="key-strengths">
+        <section class="key-strengths" id="key-strengths">
           <h2 class="section-title">Key strengths</h2>
           <ul class="key-strengths__list">
             <li>Hardworking</li>
@@ -103,7 +119,7 @@
             <li>Conscientious</li>
           </ul>
         </section>
-        <section class="code-example">
+        <section class="code-example" id="code-example">
           <h2 class="section-title">Code example</h2>
           <details>
             <summary>From ServiceNow course</summary>
@@ -208,5 +224,6 @@ PetrGrachevHWPractice04.prototype = Object.extendsObject(AbstractAjaxProcessor, 
       </a>
     </footer>
     <script src="rainbow-custom.min.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
