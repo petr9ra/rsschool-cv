@@ -248,12 +248,6 @@
     margin-left: 30px;
     margin-right: 30px;
   }
-  .left-side figure {
-    width: 100%;
-  }
-  .photo {
-    width: 100%
-  }
   .figure--right-side {
     display: none;
   }
@@ -266,19 +260,12 @@
   .code-example {
     margin-bottom: 35px;
   }
-  .about-me p {
-    margin: 0 30px;
-  }
-  .skills__list {
-    margin: 0px 30px;
-  }
-  .code-example details {
-    margin: 0 30px;
-  }
+  .about-me p,
+  .skills__list,
+  .code-example details,
   .key-strengths__list {
-    margin: 0px 30px;
+    margin: 0 30px;
   }
-}
 
 /* Mobile version */
 @media (max-width: 639px) {
@@ -307,6 +294,7 @@
   }
   .right-side {
     order: -1;
+    width: 100%;
   }
   .figure--right-side {
     display: block;
