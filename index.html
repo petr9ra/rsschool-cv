@@ -10,20 +10,40 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;1,400&display=swap"
       rel="stylesheet"
     />
+    <link rel="icon" href="img/favicon.ico" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/theme.css">
   </head>
   <body class="page-body">
+    <header>
+      <button class="burger">
+        <span class="burger__line"></span>
+        <span class="burger__name">Menu</span>
+      </button>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="#about-me">About me</a></li>
+          <li class="nav__item"><a href="#skills">Skills</a></li>
+          <li class="nav__item"><a href="#strengths">Strengths</a></li>
+          <li class="nav__item"><a href="#code-example">Code</a></li>
+          <li class="nav__item"><a href="#projects">Projects</a></li>
+          <li class="nav__item"><a href="#contact">Contact</a></li>
+          <li class="nav__item"><a href="#education">Education</a></li>
+        </ul>
+      </nav>
+    </header>
     <main class="container">
       <div class="left-side">
-        <figure>
+        <figure class="figure--left-side">
           <img
             src="img/Photo.jpg"
             width="380"
             height="507"
+            class="photo"
             alt="Photo of Peter Grachev"
           />
         </figure>
-        <section class="contact">
+        <section class="contact" id="contact">
           <h2 class="section-title">Contact</h2>
           <ul class="contact__list">
             <li class="contact__item">
@@ -33,13 +53,12 @@
               Email:<a href="mailto:petr9ra@yandex.ru">petr9ra@yandex.ru</a>
             </li>
             <li class="contact__item">
-              Address:<br /><span
-                >Voronyanskogo street, Minsk, Belarus, 220039</span
-              >
+              Address:<br />
+              <span>Voronyanskogo street, Minsk, Belarus, 220039</span>
             </li>
           </ul>
         </section>
-        <section class="education">
+        <section class="education" id="education">
           <h2 class="section-title">Education</h2>
           <ul class="education__list">
             <li class="education__item">
@@ -54,11 +73,20 @@
         </section>
       </div>
       <div class="right-side">
-        <section class="page-title">
-          <h1 class="main-title">Peter <br />Grachev</h1>
-          <p>Front-End developer</p>
-        </section>
-        <section class="about-me">
+      <section class="page-title">
+        <h1 class="main-title">Peter <br />Grachev</h1>
+        <p>Front-End developer</p>
+      </section>
+      <figure class="figure--right-side">
+        <img
+          src="img/Photo.jpg"
+          width="380"
+          height="507"
+          class="photo"
+          alt="Photo of Peter Grachev"
+        />
+      </figure>
+      <section class="about-me" id="about-me">
           <h2 class="section-title">About me</h2>
           <p>
             I like to study and learn something new. I like to read books, do
@@ -71,23 +99,17 @@
             computers.
           </p>
         </section>
-        <section class="skills">
+        <section class="skills" id="skills">
           <h2 class="section-title">Skills</h2>
           <ul class="skills__list">
             <li>Engineering</li>
             <li>HTML/CSS</li>
-            <li>
-              Knowledge about ServiceNow administration
-            </li>
-            <li>
-              Initial knowledge of JS. I have been studying JS.
-            </li>
-            <li>
-              English - A2. I have been learning English with a tutor.
-            </li>
+            <li>Knowledge about ServiceNow administration.</li>
+            <li>Initial knowledge of JS. I have been studying JS.</li>
+            <li>English - A2. I have been learning English with a tutor.</li>
           </ul>
         </section>
-        <section class="key-strengths">
+        <section class="key-strengths" id="strengths">
           <h2 class="section-title">Key strengths</h2>
           <ul class="key-strengths__list">
             <li>Hardworking</li>
@@ -98,11 +120,12 @@
             <li>Conscientious</li>
           </ul>
         </section>
-        <section class="code-example">
+        <section class="code-example" id="code-example">
           <h2 class="section-title">Code example</h2>
           <details>
             <summary>From ServiceNow course</summary>
             <pre>
+              <code data-language = "javascript">
 // Client Script (client side)
 function onChange(control, oldValue, newValue, isLoading, isTemplate) {
   if (isLoading || newValue === '') {
@@ -181,9 +204,39 @@ PetrGrachevHWPractice04.prototype = Object.extendsObject(AbstractAjaxProcessor, 
     
   type: 'PetrGrachevHWPractice04'
 });
+              </code>
             </pre>
           </details>
-        </section> 
+        </section>
+        <section class="projects" id="projects">
+          <h2 class="section-title">My projects</h2>
+          <ul class="projects__list">
+            <li class="projects__item">
+              <a href="https://rolling-scopes-school.github.io/petr9ra-JSFEPRESCHOOL/museum">
+                <img src="img/museum.jpg" width="1576" height="886" alt="Museum screenshot" class="projects__image">
+                <h3 class="projects__title">Museum</h3>
+              </a>
+            </li>
+            <li class="projects__item">
+              <a href="https://rolling-scopes-school.github.io/petr9ra-JSFEPRESCHOOL/js-clock/">
+                <img src="img/clock.jpg" width="1722" height="969" alt="JS Clock screenshot" class="projects__image">
+                <h3 class="projects__title">JavaScript Clock</h3>
+              </a>
+            </li>
+            <li class="projects__item">
+              <a href="https://rolling-scopes-school.github.io/petr9ra-JSFEPRESCHOOL/custom-video-player/">
+                <img src="img/player.jpg" width="1366" height="752" alt="Player screenshot" class="projects__image">
+                <h3 class="projects__title">Custom Video Player</h3>
+              </a>
+            </li>
+            <li class="projects__item">
+              <a href="https://rolling-scopes-school.github.io/petr9ra-JSFEPRESCHOOL/vertical-slider/">
+                <img src="img/slider.jpg" width="1724" height="970" alt="Slider screenshot" class="projects__image">
+                <h3 class="projects__title">Vertical Slider</h3>
+              </a>
+            </li>
+          </ul>
+        </section>
       </div>
     </main>
     <footer class="footer">
@@ -192,8 +245,15 @@ PetrGrachevHWPractice04.prototype = Object.extendsObject(AbstractAjaxProcessor, 
       </a>
       <p class="footer__year">2021</p>
       <a class="footer__rsschool" href="https://rs.school/js/">
-        <img src="img/rs_school_js.svg" width="86" height="32" alt="RS School">
+        <img
+          src="img/rs_school_js.svg"
+          width="86"
+          height="32"
+          alt="RS School"
+        />
       </a>
     </footer>
+    <script src="rainbow-custom.min.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
