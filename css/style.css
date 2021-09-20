@@ -276,6 +276,9 @@ header {
   width: 100%;
   background-color: #f2c100;
 }
+.projects__item:active .projects__image {
+  box-shadow: 0px 0px 7px 7px rgba(0, 0, 0, 0.2);
+}
 .projects__item:active .projects__title {
   color:rgba(0, 0, 0, 0.5);
   text-shadow: none;
