@@ -233,7 +233,6 @@ header {
 /* Projects section */
 .projects {
   margin-bottom: 30px;
-
 }
 .projects__list {
   display: flex; 
@@ -251,6 +250,9 @@ header {
   box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1);
 }
 .projects__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   position: relative;
   margin: 0;
   padding: 0 10px;
@@ -265,6 +267,9 @@ header {
   width: 50%;
   height: 2px;
   background-color: #ccc;
+}
+.projects__technologies img {
+  width: 30px;
 }
 .projects__item:hover .projects__image {
   box-shadow: 0px 0px 7px 7px rgba(0, 0, 0, 0.3);
