@@ -2,7 +2,6 @@
 
 ## Contacts
 * email: petr9ra@yandex.ru
-* phone number: +375 33 318 33 87 (Viber/Telegram)
 * discord: Petr Grachev#1240
 
 ## About me
